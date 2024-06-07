@@ -36,7 +36,7 @@ export function AuthProvider({ children }: PropsWithChildren) {
         const userID = res.data.id;
 
         localStorage.setItem("@task_manager:userID", JSON.stringify(userID));
-
+        setAuthUserID(userID);
         return true;
       })
       .catch((error) => {

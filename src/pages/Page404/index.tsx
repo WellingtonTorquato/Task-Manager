@@ -1,9 +1,9 @@
 import { Container } from "./styles";
 
-export function Home() {
+export function Page404() {
   return (
     <Container>
-      <h1>Home</h1>
+      <h1>Page404</h1>
     </Container>
   );
 }

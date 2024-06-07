@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { App } from "../pages/App";
-import { Home } from "../pages/Page404";
-import { Page404 } from "../pages/Home";
+import { Home } from "../pages/Home";
+import { Page404 } from "../pages/Page404";
 import { Tasks } from "../pages/Tasks";
 import { CreateTasks } from "../pages/CreateTasks";
 import { About } from "../pages/About";

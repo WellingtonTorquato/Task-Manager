@@ -1,4 +1,4 @@
-import { Container } from "./styles";
+import { Container } from "./style";
 
 type MenuProps = {
   title: string;

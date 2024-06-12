@@ -5,7 +5,7 @@ export const Container = styled.div`
   place-content: center;
   height: 100vh;
 
-  .signInPart1 {
+  .signInLogo {
     text-align: center;
 
     h1 {
@@ -18,8 +18,31 @@ export const Container = styled.div`
     }
   }
 
-  .signInPart2 {
+  .signInForm {
     margin-top: 4.2rem;
+    text-align: center;
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    .messageChangePage {
+      margin-top: 4.2rem;
+
+      span {
+        font-size: 1.4rem;
+      }
+
+      button {
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-decoration: underline;
+
+        &:disabled {
+          cursor: default;
+        }
+      }
+    }
   }
 
   @media (min-width: 768px) {
@@ -27,7 +50,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
 
-    .signInPart1 {
+    .signInLogo {
       flex: 1;
       text-align: center;
 
@@ -47,8 +70,22 @@ export const Container = styled.div`
       }
     }
 
-    .signInPart2 {
+    .signInForm {
       flex: 1;
+
+      h2 {
+        font-size: 2.4rem;
+      }
+
+      .messageChangePage {
+        span {
+          font-size: 1.6rem;
+        }
+
+        button {
+          font-size: 1.6rem;
+        }
+      }
     }
   }
 `;

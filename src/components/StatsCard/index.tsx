@@ -1,6 +1,6 @@
-import { CardStyleType, Container } from "./styles";
+import { CardStyleType, Container } from "./style";
 
-type StatsCardProps = {
+type StatsCardTypes = {
   title: string;
   icon: string;
   number?: number;
@@ -9,15 +9,22 @@ type StatsCardProps = {
   onClick?: () => void;
 };
 
-export function StatsCard({ title, icon, number, variant = "neutral", total, onClick }: StatsCardProps) {
-  const percentage = number && total ? (number / total) * 100 : 0;
+export function StatsCard({
+  title,
+  icon,
+  number,
+  total,
+  variant = "neutral",
+  onClick,
+}: StatsCardTypes) {
+  const percentage = number && total ? (number / total) * 100 : null;
   return (
-    <Container onClick={onClick} variant={variant}>
+    <Container variant={variant} onClick={onClick}>
       <div>
         <h3>
-        {title} {total && `(${percentage.toFixed(2)}%)`}
+          {title} {percentage && `(${percentage.toFixed(2)}%)`}
         </h3>
-        <p>{number == undefined ? "-" : number}</p>
+        <p>{number || "-"}</p>
       </div>
       <i className="material-icons">{icon}</i>
     </Container>

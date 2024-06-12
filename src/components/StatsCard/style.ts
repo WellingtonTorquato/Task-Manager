@@ -7,8 +7,8 @@ type CardContainerStyles = {
 };
 
 const COLORS = {
-  completed: "CHECK",
-  pending: "COMPLEMENTARY",
+  completed: "CHECK400",
+  pending: "COMPLEMENTARY400",
   late: "DANGER400",
   neutral: "LIGHT200",
 } as const;
@@ -24,6 +24,7 @@ export const Container = styled.div<CardContainerStyles>`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: 100ms;
 
   &:hover {
     filter: brightness(1.1);
